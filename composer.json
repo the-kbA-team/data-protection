@@ -1,0 +1,37 @@
+{
+  "name": "kba-team/data-protection",
+  "description": "Deterministic one-way encryption of unique sensitive data.",
+  "type": "library",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/the-kbA-team/data-protection/issues"
+  },
+  "keywords": [
+    "oneway",
+    "encrypted",
+    "deterministic",
+    "encryption",
+    "searchable",
+    "search",
+    "social security number",
+    "ssn",
+    "data protection"
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^5.5|^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "kbATeam\\DataProtection\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\kbATeam\\DataProtection\\": "tests/"
+    }
+  }
+}
