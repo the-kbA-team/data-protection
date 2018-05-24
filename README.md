@@ -1,5 +1,8 @@
 # Deterministic one-way encryption of unique sensitive data
 
+[![License: MIT][license-mit]](LICENSE)
+[![Build Status][build-status-master]][travis-ci]
+
 The goal of this class is to encrypt unique sensitive information, like social security numbers, without the possibility
 to decrypt it afterwards but still be able to search for it using `equals` and `not equals` operators.
 
@@ -122,3 +125,6 @@ SOFTWARE.
 
 
 [se59580]: https://security.stackexchange.com/questions/59580/how-to-safely-store-sensitive-data-like-a-social-security-number#61004 "'How to safely store sensitive data like a social security number?', Retrieved 2018-05-24 09:00"
+[license-mit]: https://img.shields.io/badge/license-MIT-blue.svg
+[build-status-master]: https://travis-ci.org/the-kbA-team/data-protection.svg?branch=master
+[travis-ci]: https://travis-ci.org/the-kbA-team/data-protection
