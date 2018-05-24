@@ -2,6 +2,8 @@
 
 [![License: MIT][license-mit]](LICENSE)
 [![Build Status][build-status-master]][travis-ci]
+[![Maintainability][maintainability-badge]][maintainability]
+[![Test Coverage][coverage-badge]][coverage]
 
 The goal of this class is to encrypt unique sensitive information, like social security numbers, without the possibility
 to decrypt it afterwards but still be able to search for it using `equals` and `not equals` operators.
@@ -128,3 +130,7 @@ SOFTWARE.
 [license-mit]: https://img.shields.io/badge/license-MIT-blue.svg
 [build-status-master]: https://travis-ci.org/the-kbA-team/data-protection.svg?branch=master
 [travis-ci]: https://travis-ci.org/the-kbA-team/data-protection
+[maintainability-badge]: https://api.codeclimate.com/v1/badges/85b521bf4ee9c8b22c01/maintainability
+[maintainability]: https://codeclimate.com/github/the-kbA-team/data-protection/maintainability
+[coverage-badge]: https://api.codeclimate.com/v1/badges/85b521bf4ee9c8b22c01/test_coverage
+[coverage]: https://codeclimate.com/github/the-kbA-team/data-protection/test_coverage
