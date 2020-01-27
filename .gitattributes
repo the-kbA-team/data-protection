@@ -5,3 +5,4 @@ vendor/ export-ignore
 .travis.yml export-ignore
 composer.* export-ignore
 phpunit.xml export-ignore
+README.md export-ignore
