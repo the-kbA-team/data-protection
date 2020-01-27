@@ -51,7 +51,7 @@ class SecureSearch
      * @throws \RuntimeException in case the determination of the IV length,
      *              the IV derivation from the data, or the encryption fails.
      */
-    public static function encrypt($data, $key)
+    public static function encrypt($data, $key): string
     {
         /**
          * Determine the length of the initialization vector for the given cipher.
@@ -113,7 +113,7 @@ class SecureSearch
      * @throws \RuntimeException in case the key length is too weak or the key
      *                           generation failed.
      */
-    public static function generateKey()
+    public static function generateKey(): string
     {
         /**
          * Generate a secret key based on the defined key length.
