@@ -2,6 +2,8 @@
 
 namespace kbATeam\DataProtection;
 
+use RuntimeException;
+
 /**
  * Class kbATeam\DataProtection\SecureSearch
  *
@@ -61,7 +63,7 @@ class SecureSearch
          */
         if (false === $iv_length) {
             //@codeCoverageIgnoreStart
-            throw new \RuntimeException('error determining IV length for cipher');
+            throw new RuntimeException('error determining IV length for cipher');
             //@codeCoverageIgnoreEnd
         }
         /**
@@ -80,7 +82,7 @@ class SecureSearch
          */
         if (false === $iv) {
             //@codeCoverageIgnoreStart
-            throw new \RuntimeException('IV derivation from data failed');
+            throw new RuntimeException('IV derivation from data failed');
             //@codeCoverageIgnoreEnd
         }
         /**
@@ -90,7 +92,7 @@ class SecureSearch
         $result = openssl_encrypt($data, self::CIPHER, $key, 0, $iv);
         if (false === $result) {
             //@codeCoverageIgnoreStart
-            throw new \RuntimeException('encryption of data failed');
+            throw new RuntimeException('encryption of data failed');
             //@codeCoverageIgnoreEnd
         }
         /**
@@ -122,7 +124,7 @@ class SecureSearch
          */
         if (true !== $is_strong || false === $key_raw) {
             //@codeCoverageIgnoreStart
-            throw new \RuntimeException('key generation failed');
+            throw new RuntimeException('key generation failed');
             //@codeCoverageIgnoreEnd
         }
         return bin2hex($key_raw);
