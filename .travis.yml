@@ -1,5 +1,6 @@
 language: php
-sudo: false
+os:
+  - linux
 php:
   - 5.6
   - 7.0
