@@ -2,9 +2,9 @@ language: php
 os:
   - linux
 php:
-  - 5.6
   - 7.0
   - 7.1
+  - 7.2
 env:
   global:
     - CC_TEST_REPORTER_ID=33e96d4caae62b9822e3857791d4a49b43de7b7a0fd94ebc093567af78cc3a78
