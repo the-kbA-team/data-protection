@@ -45,8 +45,8 @@ class SecureSearch
     /**
      * One-way encryption of unique sensitive data.
      *
-     * @param $data string The data to encrypt.
-     * @param $key  string The key to use for encryption.
+     * @param string $data The data to encrypt.
+     * @param string $key  The key to use for encryption.
      * @return string The base64 encoded encrypted data.
      * @throws \RuntimeException in case the determination of the IV length,
      *              the IV derivation from the data, or the encryption fails.
