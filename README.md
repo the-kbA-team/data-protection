@@ -57,7 +57,7 @@ reasonable amount of time.
 Include this package using composer.
 
 ```bash
-composer require kba-team/data-protection: "~1.0"
+composer require kba-team/data-protection: "^1.0"
 ```
 
 Securely generate a secret key.
