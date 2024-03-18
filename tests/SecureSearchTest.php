@@ -3,6 +3,7 @@
 namespace Tests\kbATeam\DataProtection;
 
 use kbATeam\DataProtection\SecureSearch;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class Tests\kbATeam\DataProtection\SecureSearchTest
@@ -13,7 +14,7 @@ use kbATeam\DataProtection\SecureSearch;
  * @package  Tests\kbATeam\DataProtection
  * @license  MIT
  */
-class SecureSearchTest extends \PHPUnit_Framework_TestCase
+class SecureSearchTest extends TestCase
 {
     /**
      * @const The social security number used in these tests.
@@ -32,11 +33,13 @@ class SecureSearchTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Assert that the same data and the same key always give the same result.
+     * @return void
      */
     public function testEncryptMethodSuccessfully()
     {
         //use a fake social security number
         $data = self::SSN;
+        /** @var string $key */
         $key = hex2bin(self::KEY);
         $encrypted_data = SecureSearch::encrypt($data, $key);
         $this->assertEquals(self::ENCRYPTED, $encrypted_data);
@@ -44,6 +47,7 @@ class SecureSearchTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Assert that a key of the defined length is generated.
+     * @return void
      */
     public function testKeyGeneration()
     {
@@ -53,10 +57,12 @@ class SecureSearchTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Assert that the data cannot be decrypted.
+     * @return void
      */
     public function testDecryption()
     {
         $data = (int) self::SSN;
+        /** @var string $key */
         $key = hex2bin(self::KEY);
         $encrypted = SecureSearch::encrypt($data, $key);
         $this->assertEquals(self::ENCRYPTED, $encrypted);
@@ -68,10 +74,12 @@ class SecureSearchTest extends \PHPUnit_Framework_TestCase
      * Assert that it takes more than a month to calculate a rainbow table of
      * encrypted Austrian social security numbers in case the secret key has been
      * compromised.
+     * @return void
      */
     public function testTimeRainbowTable()
     {
         $postfix = '010170';
+        /** @var string $key */
         $key = hex2bin(self::KEY);
         $start = time();
         for ($i = 1000; $i < 1500; $i++) {
