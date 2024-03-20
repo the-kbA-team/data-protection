@@ -122,7 +122,7 @@ class SecureSearch
         /**
          * Throw exception in case the random key generation failed.
          */
-        if (true !== $is_strong || false === $key_raw) {
+        if (true !== $is_strong || false == $key_raw) {
             //@codeCoverageIgnoreStart
             throw new RuntimeException('key generation failed');
             //@codeCoverageIgnoreEnd
